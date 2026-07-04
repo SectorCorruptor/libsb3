@@ -38,6 +38,18 @@ def get_opcodes_from_js(file:str) -> dict | list:
                         EVENT: "BOOLEAN",
                         HAT: "HAT"
                     },
+                    ArgumentType: {
+                        STRING: 'STRING',
+                        NUMBER: 'NUMBER',
+                        BOOLEAN: 'BOOLEAN',
+                        COLOR: 'COLOR',
+                        ANGLE: 'ANGLE',
+                        MATRIX: 'MATRIX',
+                        NOTE: 'NOTE',
+                        IMAGE: 'IMAGE',
+                        COSTUME: 'COSTUME',
+                        SOUND: 'SOUND',
+                    }
                     extensions: {
                         register(ext){
                             // dummy

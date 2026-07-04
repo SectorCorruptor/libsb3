@@ -44,7 +44,7 @@ class sb3writer:
 
     def add_extension(self, extension):
         """Add an extension to the project, based on this extension's identifier. A list of identifiers for
-        built-in core extensions comes with _EXTENSIONS.
+        built-in coreii extensions comes with _EXTENSIONS.
         """
         if extension in _EXTENSIONS and extension not in self.project["extensions"]:
             self.project["extensions"].append(extension)
