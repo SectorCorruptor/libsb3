@@ -26,7 +26,7 @@ class sound {
                 
             ],
             menus: {
-                __motion_menu__: {
+                sounds: {
                     acceptReporters: true,
                     items: __motion_menu__
                 },

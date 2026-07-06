@@ -40,7 +40,7 @@ class motion {
                     blockType: Scratch.BlockType.COMMAND,
                     text: "go to [0]",
                     arguments: {
-                        0: { type: "string", menu: "__motion_menu__" }
+                        0: { type: "string", menu: "motion_menu" }
                     }
                 },
                 {
@@ -58,7 +58,7 @@ class motion {
                     text: "glide [0] secs to [1]",
                     arguments: {
                         0: { type: "number", defaultValue: 10 },
-                        1: { type: "string", menu: "__motion_menu__" },
+                        1: { type: "string", menu: "motion_menu" },
                     }
                 },
                 {
@@ -84,7 +84,7 @@ class motion {
                     blockType: Scratch.BlockType.COMMAND,
                     text: "point towards [0]",
                     arguments: {
-                        0: { type: "string", menu: "__motion_menu_sans_mouse__"},
+                        0: { type: "string", menu:"motion_menu_sans_mouse"},
                     }
                 },
                 {
@@ -130,7 +130,7 @@ class motion {
                     blockType: Scratch.BlockType.COMMAND,
                     text: "set rotation style [0]",
                     arguments: {
-                        0: { type: "string", menu: "__rotation_style__"},
+                        0: { type: "string", menu: "rotation_style"},
                     }
                 },
                 {
@@ -153,15 +153,15 @@ class motion {
                 },
             ],
             menus: {
-                __motion_menu__: {
+                motion_menu: {
                     acceptReporters: true,
                     items: __motion_menu__
                 },
-                __motion_menu_sans_mouse__: {
+                motion_menu_sans_mouse: {
                     acceptReporters: true,
                     items: __motion_menu_sans_mouse__
                 },
-                __rotation_style__: {
+                rotation_style: {
                     acceptReporters: false,
                     items: ['left-right', "don't rotate", 'all around']
                 }
