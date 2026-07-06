@@ -8,7 +8,6 @@ __motion_menu_sans_mouse__ = "MOTION_MENU_SANS_MOUSE"
 class motion {
     getInfo(){
         return {
-            // The actual value of these two don't matter
             id: "motion",
             name: "motion",
             blocks: [

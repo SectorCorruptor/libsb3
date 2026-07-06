@@ -2,12 +2,13 @@
 
 // Dynamic list enums holding special meaning to our compiler
 
+__costumes_menu__ = "__costumes_menu__"
+__bg_menu__ = "__bg_menu__"
 
 
 class looks {
     getInfo() {
         return {
-            // The actual value of these two don't matter
             id: "looks",
             name: "Looks",
             blocks: [
@@ -60,7 +61,7 @@ class looks {
                     blockType: Scratch.BlockType.COMMAND,
                     text: "switch costume to [COSTUME]",
                     arguments: {
-                        COSTUME: { type: "string", defaultValue: "costume1" }
+                        COSTUME: { type: "string", menu: "costumes", defaultValue: "costume1" }
                     }
                 },
                 {
@@ -73,7 +74,7 @@ class looks {
                     blockType: Scratch.BlockType.COMMAND,
                     text: "switch backdrop to [BACKDROP]",
                     arguments: {
-                        BACKDROP: { type: "string", defaultValue: "backdrop1" }
+                        BACKDROP: { type: "string", menu:"bg", defaultValue: "backdrop1" }
                     }
                 },
                 {
@@ -121,14 +122,6 @@ class looks {
                     }
                 },
                 {
-                    opcode: "looks_setstyle",
-                    blockType: Scratch.BlockType.COMMAND,
-                    text: "set rotation style [STYLE]",
-                    arguments: {
-                        STYLE: { type: "string", menu: "rotationStyle", defaultValue: "all around" }
-                    }
-                },
-                {
                     opcode: "looks_costumenumbername",
                     blockType: Scratch.BlockType.REPORTER,
                     text: "costume [NUMBERNAME]",
@@ -165,6 +158,14 @@ class looks {
                         DIRECTION: { type: "string", menu: "forwardBackward", defaultValue: "forward" },
                         NUM: { type: "number", defaultValue: 1 }
                     }
+                },
+                {
+                    opcode: "looks_switchbackdroptoandwait",
+                    blockType: Scratch.BlockType.COMMAND,
+                    text: "switch backdrop to [BACKDROP] and wait",
+                    arguments:{
+                        BACKDROP: { type: "string", menu: "bg",defaultValue: "backdrop1" }  
+                    }
                 }
             ],
             menus: {
@@ -183,6 +184,14 @@ class looks {
                 backdropnumbername: {
                     acceptReporters: false,
                     items: ["number", "name"]
+                },
+                costumes: {
+                    acceptReporters: true,
+                    items: __costumes_menu__
+                },
+                bg: {
+                    acceptReporters: true,
+                    items: __bg_menu__
                 }
             }
         }
